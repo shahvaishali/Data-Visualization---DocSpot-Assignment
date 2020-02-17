@@ -1,0 +1,131 @@
+
+body {
+  /* background: #343E59; */
+  color: #777;
+  font-family: Montserrat, Arial, sans-serif;
+}
+
+.body-bg {
+  background: #F3F4FA !important;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 600;
+}
+
+body {
+  /*background: linear-gradient(45deg,#3a3a60,#5f5f8e);
+  min-height: 100vh;*/
+}
+
+.content-area {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #2B2D3E;
+  padding: 25px 20px;  
+}
+
+.table-box {
+  background-color: #2B2D3E;
+
+}
+.shadow {
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+}
+
+#main{
+    padding: 50px;
+}
+
+.table-font
+{
+    color: rgb(255, 255, 255);
+}
+
+.odd:hover{
+    background-color: rgb(255, 255, 255)!important;
+    color: rgb(0, 0, 0);
+    /* transform: scale(1.02); */
+}
+
+.even:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* transform: scale(1.02); */
+}
+
+.bg{
+    height: 500px;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+    
+	tfoot tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%;
+       display: flex;
+       justify-content:left;
+	}
+	
+    
+	td:before { 
+		/* Now like a table header */
+		position: relative;
+		/* Top/left values mimic padding */
+		left: 6px;
+		width: 58%; 
+		padding-right: 10px; 
+        display:flex;
+        justify-content: left;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Store"; }
+	td:nth-of-type(2):before { content: "Date"; }
+	td:nth-of-type(3):before { content: "Invoice #"; }
+	td:nth-of-type(4):before { content: "Item"; }
+	td:nth-of-type(5):before { content: "Unit Price"; }
+	td:nth-of-type(6):before { content: "Number of Units Purchased"; }
+	td:nth-of-type(7):before { content: "Total"; }
+    
+    .bg{
+    height: 90%;
+    }
+
+    
+}
