@@ -8,3 +8,4 @@
     - How is the revenue distributed over a period of time?
     - What is the revenue of fruits selling every month?
 
+Please click the following [link](https://data-visualization-docspot-assignment.netlify.com/) for project demonstration.
